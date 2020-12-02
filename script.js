@@ -43,9 +43,11 @@ const displayResult = () => {
             <h4>${state.userResult}</h4>
             <div class = "col s6">
                 <p>Your choice: ${state.userChoice}</p>
+                <img src= "${state.options.find((option) => option.name == state.userChoice).image}">
             </div>    
             <div class = "col s6">
                 <p>Computer choice: ${state.computerChoice}</p>
+                <img src= "${state.options.find((option) => option.name == state.computerChoice).image}">
             </div>    
             <div class = "col s6">
                 <p>Your Score: ${state.userScore}</p>
@@ -123,7 +125,7 @@ const showGame = () =>{
     state.options.forEach((option) => {
         htmlString += `
         <div class="${option.name} col s12 m4">
-            <img onclick="set_selected_option(${option.name})" src="${option.image}">
+            <img class = "image" onclick="set_selected_option(${option.name})" src="${option.image}">
         </div>`
     });
     htmlString += `</div>`
