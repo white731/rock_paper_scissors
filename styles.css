@@ -1,1 +1,5 @@
-@import "materialize"
+@import "materialize";
+
+ img:hover {
+    box-shadow: 10px 10px 10px grey;
+}
